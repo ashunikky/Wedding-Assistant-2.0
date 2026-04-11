@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://127.0.0.1:8000/chat";
+const API_URL = "https://wedding-ai-rag-assistant-backend.onrender.com/chat";
 
 export const sendMessage = async (query) => {
   const role = localStorage.getItem("role");
