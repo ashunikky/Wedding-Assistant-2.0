@@ -41,6 +41,11 @@ export default function Chat() {
 
     try {
       const res = await sendMessage(input);
+
+      // 🔥 ADD HERE
+    console.log("FULL RESPONSE:", res);
+    console.log("IMAGE URL:", res.image);
+    
       setMessages((prev) => [
         ...prev,
         { sender: "bot", text: res.answer, image: res.image },
@@ -108,7 +113,7 @@ export default function Chat() {
                   isLadkewale ? "text-amber-600" : "text-rose-400"
                 }`}
               >
-                {isLadkewale ? "🤵 Suraj's side" : "👰 Rani's side"}
+                {isLadkewale ? "Suraj's side" : "Rani's side"}
               </span>
             </div>
 

@@ -1,8 +1,10 @@
 const SUGGESTIONS = [
-  { label: "Groom 🤵", query: "Tell me about Suraj Kumar Gupta" },
-  { label: "Bride 👰", query: "Tell me about Rani Kumari" },
-  { label: "Next Event 📅", query: "What is the upcoming event?" },
-  { label: "Developer 💻", query: "Who developed this wedding assistant?" }
+  { label: "Groom", query: "who is the groom?" },
+  { label: "Bride", query: "who is the bride?" },
+  { label: "Live event", query: "Is there any live event?" },
+  { label: "Developer", query: "Who developed this wedding assistant?" },
+  { label: "Barat", query: "Barat procession" },
+  { label: "reception", query: "reception" }
 ];
 
 export default function Suggestions({ onSelect }) {
