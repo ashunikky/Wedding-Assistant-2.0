@@ -67,13 +67,17 @@ export default function Chat() {
   const handleSwitchRole = () => setShowModal(true);
 
   const confirmSwitch = () => {
-    const newRole = isLadkewale ? "ladkiwale" : "ladkewale";
-    localStorage.setItem("role", newRole);
-    localStorage.setItem("session_id", crypto.randomUUID());
-    setMessages([]);
-    setShowModal(false);
-    navigate(0);
-  };
+  const newRole = isLadkewale ? "ladkiwale" : "ladkewale";
+
+  localStorage.setItem("role", newRole);
+  localStorage.setItem("session_id", crypto.randomUUID());
+
+  setMessages([]);
+  setShowModal(false);
+
+  // ✅ correct reload
+  window.location.reload();
+};
 
   const cancelSwitch = () => setShowModal(false);
 
