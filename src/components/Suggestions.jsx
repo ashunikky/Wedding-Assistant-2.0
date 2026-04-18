@@ -1,10 +1,10 @@
 const SUGGESTIONS = [
+  { label: "Live event", query: "Is there any live event?" },
+  { label: "Barat", query: "Barat departure and Barat procession" },
+  { label: "reception", query: "reception" },
   { label: "Groom", query: "who is the groom?" },
   { label: "Bride", query: "who is the bride?" },
-  { label: "Live event", query: "Is there any live event?" },
-  { label: "Developer", query: "Who developed this wedding assistant?" },
-  { label: "Barat", query: "Barat procession" },
-  { label: "reception", query: "reception" }
+  { label: "Developer", query: "Who developed this wedding assistant?" }
 ];
 
 export default function Suggestions({ onSelect }) {

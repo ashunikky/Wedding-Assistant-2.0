@@ -42,9 +42,6 @@ export default function Chat() {
     try {
       const res = await sendMessage(input);
 
-      // 🔥 ADD HERE
-    console.log("FULL RESPONSE:", res);
-    console.log("IMAGE URL:", res.image);
     
       setMessages((prev) => [
         ...prev,
@@ -72,11 +69,14 @@ export default function Chat() {
   localStorage.setItem("role", newRole);
   localStorage.setItem("session_id", crypto.randomUUID());
 
-  setMessages([]);
   setShowModal(false);
-
-  // ✅ correct reload
-  window.location.reload();
+  setMessages([
+    {
+      sender: "bot",
+      text: "Namaste! 🙏 Main shaadi se jude sawaalon ka uttar de sakta hun. Aap kya jaanana chaahenge?",
+    },
+  ]);
+  setInput("");
 };
 
   const cancelSwitch = () => setShowModal(false);
